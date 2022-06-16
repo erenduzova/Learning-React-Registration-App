@@ -7,7 +7,7 @@ var userIsRegistered = false;
 function App() {
   return (
     <div className="container">
-      {userIsRegistered ? <Form form="Login" /> : <Form form="Register" />}
+      <Form isRegistered={userIsRegistered} />
     </div>
   );
 }
