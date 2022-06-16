@@ -1,18 +1,15 @@
 import React from "react";
 
-import Login from "./Login";
+import Form from "./Form";
 
-var isLoggedIn = false;
+var userIsRegistered = false;
 
 function App() {
   return (
     <div className="container">
-      {isLoggedIn === true ? <h1>Hello</h1> : <Login />}
+      {userIsRegistered ? <Form form="Login" /> : <Form form="Register" />}
     </div>
   );
 }
 
 export default App;
-// Because it is Boolean both of them can be used
-// {isLoggedIn === true ? <h1>Hello</h1> : <Login />}
-// {isLoggedIn ? <h1>Hello</h1> : <Login />}
