@@ -1,13 +1,24 @@
-import React from "react";
-
-import Form from "./Form";
-
-var userIsRegistered = false;
+import React, { useState } from "react";
 
 function App() {
+  const [contact, setContact] = useState({
+    fName: "",
+    lName: "",
+    email: ""
+  });
+
   return (
     <div className="container">
-      <Form isRegistered={userIsRegistered} />
+      <h1>
+        Hello {contact.fName} {contact.lName}
+      </h1>
+      <p>{contact.email}</p>
+      <form>
+        <input name="fName" placeholder="First Name" />
+        <input name="lName" placeholder="Last Name" />
+        <input name="email" placeholder="Email" />
+        <button>Submit</button>
+      </form>
     </div>
   );
 }
